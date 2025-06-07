@@ -70,7 +70,7 @@ Esta aplicación móvil permite a los usuarios **monitorear sus niveles de gluco
 ## 🏗️ Arquitectura del Proyecto
 
 ### 🎯 Atomic Design
-La aplicación implementa **Atomic Design** para una organización clara y escalable:
+La aplicación implementa **Atomic Design** para una organización clara y escalable: componentes separados en las carpetas de Atoms, molecules, organisms y templates.
 
 ### 🔄 Arquitectura Flux con Redux Toolkit
 Elegí **Redux Toolkit** por las siguientes razones:
