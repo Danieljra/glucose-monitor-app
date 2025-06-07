@@ -1,97 +1,173 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🩺 Glucose Monitor App
 
-# Getting Started
+> **Aplicación móvil para monitoreo de glucosa en tiempo real**  
+> Prueba técnica desarrollada por **Daniel Ramírez** - *Fullstack Developer*
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+<div align="center">
 
-## Step 1: Start Metro
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+</div>
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📱 Acerca del Proyecto
 
-```sh
-# Using npm
+Esta aplicación móvil permite a los usuarios **monitorear sus niveles de glucosa** de manera intuitiva y visual. Desarrollada como una prueba técnica que demuestra la implementación de arquitecturas modernas y mejores prácticas en React Native.
+
+### ✨ Características Principais
+- 📊 **Visualización de datos** con gráficos interactivos SVG
+- ⏰ **Filtros temporales** (6h, 12h, 24h)
+- 🔐 **Autenticación segura** con persistencia de datos
+- 🎨 **Interfaz moderna** siguiendo principios de Atomic Design
+- 🚀 **Performance optimizada** con memoización y callbacks
+
+## 🛠️ Tecnologías y Dependencias
+
+### Core Framework
+```json
+{
+  "react": "19.0.0",
+  "react-native": "0.79.3",
+  "typescript": "5.0.4"
+}
+```
+
+### Gestión de Estado
+```json
+{
+  "@reduxjs/toolkit": "^2.8.2",
+  "react-redux": "^9.2.0",
+  "redux-persist": "^6.0.0"
+}
+```
+
+### Formularios y Validación
+```json
+{
+  "react-hook-form": "^7.57.0",
+  "@hookform/resolvers": "^5.0.1",
+  "yup": "^1.6.1"
+}
+```
+
+### UI y Gráficos
+```json
+{
+  "react-native-svg": "^15.12.0",
+  "react-native-vector-icons": "^10.2.0",
+  "dayjs": "^1.11.13"
+}
+```
+
+### Almacenamiento
+```json
+{
+  "@react-native-async-storage/async-storage": "^2.2.0"
+}
+```
+
+## 🏗️ Arquitectura del Proyecto
+
+### 🎯 Atomic Design
+La aplicación implementa **Atomic Design** para una organización clara y escalable:
+
+### 🔄 Arquitectura Flux con Redux Toolkit
+Elegí **Redux Toolkit** por las siguientes razones:
+
+- **Predictabilidad**: Estado centralizado y flujo unidireccional
+- **DevTools**: Excelente experiencia de debugging
+- **Persistence**: Mantiene la sesión del usuario automáticamente
+- **Tipado**: Integración perfecta con TypeScript
+
+### 📝 TypeScript en Todo el Proyecto
+La implementación completa de **TypeScript** proporciona:
+
+- **Seguridad de tipos**: Prevención de errores en tiempo de compilación
+- **Mejor DX**: Autocompletado inteligente y refactoring seguro
+- **Escalabilidad**: Código más mantenible y documentado
+- **Integración**: Tipado fuerte en Redux, API calls y componentes
+
+### ⚡ Optimización de Performance
+
+#### useMemo y useCallback
+Implementé estas optimizaciones para **evitar re-renders innecesarios**:
+#### React.memo
+Todos los componentes están envueltos en `memo()` para optimizar renderizado.
+
+
+## 🚀 Instalación y Ejecución
+
+### Prerequisitos
+```bash
+node >= 18.0.0
+npm >= 8.0.0
+```
+
+### 📦 Instalación de Dependencias
+```bash
+# Instalar dependencias de Node
+npm install
+
+# Para iOS (solo en macOS)
+cd ios && pod install && cd ..
+```
+
+### 🖥️ Ejecución en Windows
+
+```bash
+# Iniciar Metro Bundler
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+# En otra terminal - Android
 npm run android
 
-# OR using Yarn
-yarn android
+# Para limpiar cache si hay problemas
+npx react-native start --reset-cache
 ```
 
-### iOS
+### 🍎 Ejecución en macOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+```bash
+# Iniciar Metro Bundler
+npm start
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+# En otra terminal - iOS
 npm run ios
 
-# OR using Yarn
-yarn ios
+# En otra terminal - Android
+npm run android
+
+# Para limpiar cache
+npx react-native start --reset-cache
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+### 🔧 Comandos Útiles
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+# Linting
+npm run lint
 
-## Step 3: Modify your app
+# Testing
+npm run test
 
-Now that you have successfully run the app, let's make changes!
+# Limpiar proyecto
+npx react-native clean
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 📊 Funcionalidades Principales
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- **🔐 Autenticación**: Login seguro con validación de formularios
+- **📈 Gráficos**: Visualización interactiva de datos de glucosa
+- **⏰ Filtros**: Rangos temporales de 6h, 12h y 24h
+- **🔄 Actualización**: Pull-to-refresh para datos en tiempo real
+- **💾 Persistencia**: Sesión mantenida automáticamente
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## 🎨 Credenciales de Prueba
+  Email: postulante@prueba.com
+  Contraseña: Aa123456.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+  <div align="center">
+  <p>Desarrollado con ❤️ por <strong>Daniel Ramírez</strong></p>
+  <p><em>Fullstack Developer</em></p>
+</div>

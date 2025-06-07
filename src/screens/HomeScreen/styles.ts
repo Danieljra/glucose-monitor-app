@@ -1,0 +1,108 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F8F9FA',
+  },
+  scrollView: {
+    flex: 1,
+  },
+  header: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    paddingBottom: 12,
+  },
+  headerContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#0082CE',
+    marginBottom: 4,
+  },
+  subtitleText: {
+    fontSize: 16,
+    color: '#61738D',
+  },
+  logoutButton: {
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#61738D',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  logoutText: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#61738D',
+  },
+  noDataContainer: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 24,
+    margin: 16,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  noDataTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#61738D',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  noDataSubtitle: {
+    fontSize: 14,
+    color: '#61738D',
+    textAlign: 'center',
+    lineHeight: 20,
+  },
+  infoContainer: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 10,
+    margin: 10,
+    marginTop: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  infoTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#0082CE',
+    marginBottom: 12,
+  },
+  rangeItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  colorIndicator: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    marginRight: 8,
+  },
+  rangeText: {
+    fontSize: 14,
+    color: '#61738D',
+  },
+});
